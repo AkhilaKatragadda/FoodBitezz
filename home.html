@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Food Order Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">FoodBitezzz..</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#blog">Blog</a>
+            <a href="#footer">Contact</a>
+            <a href="#orders" onclick="showOrders()">Orders</a>
+        </nav>
+        <button onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Order the Finest</h1>
+            <p>Takeaway Food to your Door</p>
+            <input type="text" id="search" placeholder="Search food...">
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="section">
+        <h2 class="title">Popular Recipes</h2>
+        <div id="menuContainer" class="grid"></div>
+    </section>
+    <section id="blog" class="section">
+        <h2 class="title">Our Blog</h2>
+
+        <div class="blog-container">
+
+            <!-- Delivery Tips -->
+            <div class="blog-card">
+                <h3>🚚 Delivery Tips</h3>
+                <ul>
+                    <li>✔ Always provide accurate address</li>
+                    <li>✔ Keep your phone reachable</li>
+                    <li>✔ Choose contactless delivery if needed</li>
+                    <li>✔ Track your order in real-time</li>
+                </ul>
+            </div>
+
+            <!-- Food Tips -->
+            <div class="blog-card">
+                <h3>🍽 Food Tips</h3>
+                <ul>
+                    <li>✔ Try different cuisines for better experience</li>
+                    <li>✔ Check ratings before ordering</li>
+                    <li>✔ Avoid overeating late at night</li>
+                    <li>✔ Drink water after meals</li>
+                </ul>
+            </div>
+
+            <!-- Donate Section -->
+            <div class="blog-card">
+                <h3>❤️ Support & Donate</h3>
+                <p>
+                    Help us serve food to people in need. Every small contribution
+                    can make a big difference.
+                </p>
+                <button onclick="donate()">Donate Now</button>
+            </div>
+
+        </div>
+    </section>
+    <section id="orders">
+        <h2 class="title">Order History</h2>
+        <div id="orderHistory"></div>
+    </section>
+    <br><br>
+
+    <!-- CART -->
+    <div id="cart" class="cart">
+        <button onclick="toggleCart()" class="close-btn">❌</button>
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <h3>Total: ₹<span id="total">0</span></h3><br><br>
+        <button onclick="placeOrder()" style="background-color: rgb(176, 10, 10); color: rgb(242, 244, 248);">Place Order</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <h1>Contact Us</h1><br><br>
+        <div class="footer-container">
+
+            <!-- ABOUT -->
+            <div class="footer-col">
+                <h3>ABOUT US</h3>
+                <p>Our Story</p>
+                <p>Affiliate Program</p>
+                <p>Wholesale Program</p>
+                <p>Careers</p>
+            </div>
+
+            <!-- SUPPORT -->
+            <div class="footer-col">
+                <h3>CUSTOMER SUPPORT</h3>
+                <p>Returns & Exchanges</p>
+                <p>Shipping Info</p>
+                <p>Track Order</p>
+                <p>Help Center</p>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="footer-col">
+                <h3>SERVICES</h3>
+                <p>Earn Rewards</p>
+                <p>Payment Plans</p>
+                <p>Store Locator</p>
+                <p>Contact Us</p>
+            </div>
+
+            <!-- CONNECT -->
+            <div class="footer-col connect">
+                <h3>CONNECT WITH US</h3>
+
+                <div class="icons">
+                    <span>📘</span>
+                    <span>🐦</span>
+                    <span>▶️</span>
+                    <span>📸</span>
+                    <span>📌</span>
+                </div>
+
+                <p>Get updates and offers directly to your inbox.</p>
+
+                <button class="subscribe-btn">📩 Get in the loop!</button>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 FoodBitezzz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

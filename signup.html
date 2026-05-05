@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(120deg, #74ebd5, #d383f5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-box {
+            width: 350px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid white;
+            background: transparent;
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #3b5c85;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="signup-box">
+        <h2>Signup</h2>
+
+        <form onsubmit="return saveUser()">
+            <input type="text" id="username" placeholder="Username" required><br><br>
+            <input type="password" id="password" placeholder="Password" required><br><br>
+            <button type="submit">Signup</button>
+        </form>
+
+        <script>
+            function saveUser() {
+                let user = document.getElementById("username").value;
+                let pass = document.getElementById("password").value;
+
+                localStorage.setItem("username", user);
+                localStorage.setItem("password", pass);
+
+                alert("Signup Successful!");
+
+                window.location.href = "index.html"; // go to login page
+                return false;
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
